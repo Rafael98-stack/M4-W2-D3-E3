@@ -13,7 +13,7 @@ public Product(){
 public void getInserisciLibri (){
     System.out.println("Inserisci quanti Libri devono essere inseriti");
     Scanner scanner = new Scanner(System.in);
-    Set<String> col1= new HashSet<String>();
+    Set<String> col1= new HashSet<>();
     int Quantita = scanner.nextInt();
     System.out.println("Inserisci quali Libri devono essere inseriti");
 
