@@ -27,11 +27,10 @@ public class EsercizioUno {
     }
 
     public static void stampaCategorieBookPrezzoMaggioreDi100(Set<Product> listaProdotti) {
-        for (Product prodotto : listaProdotti) {
-            if ("Book".equals(prodotto.getCategory()) && prodotto.getPrice() > 100) {
-                System.out.println("Categoria: " + prodotto.getCategory() +
-                        ", Prezzo: " + prodotto.getPrice());
-            }
-        }
+        listaProdotti.stream()
+                .filter(product -> "Book".equals(product.getCategory()) && product.getPrice() > 100)
+                .forEach(product -> System.out.println("Categoria: " + product.getCategory() +
+                        ", Prezzo: " + product.getPrice()));
     }
-}
+    }
+
