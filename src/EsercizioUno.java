@@ -1,27 +1,26 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class EsercizioUno {
     public static void main(String[] args) {
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        al.add(205);
-        al.add(102);
-        al.add(98);
-        al.add(275);
-        al.add(203);
-        System.out.println("Elements of the ArrayList " +
-                "before sorting : " + al);
-
-        // using lambda expression in place of comparator object
-        Collections.sort(al, (o1, o2) -> (o1 > o2) ? -1 :
-                (o1 < o2) ? 1 : 0);
-
-        System.out.println("Elements of the ArrayList after" +
-                " sorting : " + al);
+        Set<Product> ListaProdotti = new HashSet<Product>();
+        Product prodotto1= new Product(123123123L,"HarryPotter","Book",123.20) ;
+        Product prodotto2= new Product(432134321L,"JFK","Book",100.20) ;
+        Product prodotto3= new Product(1231233213L,"GOT","Book",180.20) ;
+        Product prodotto4= new Product(32131233L,"LK","Book",60.20) ;
+        Product prodotto5= new Product(4324325L,"Lunar","Book",50.20) ;
+        ListaProdotti.add(prodotto1);
+        ListaProdotti.add(prodotto2);
+        ListaProdotti.add(prodotto3);
+        ListaProdotti.add(prodotto4);
+        ListaProdotti.add(prodotto5);
+      stampaListaProdotti(ListaProdotti);
+    }
+    public static void stampaListaProdotti(Set<Product> listaProdotti) {
+        for (Product prodotto : listaProdotti) {
+            System.out.println(prodotto);
         }
-      static   public void getCategoria(){
-
-      }
+    }
     }
